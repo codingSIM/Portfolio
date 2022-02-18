@@ -1,0 +1,213 @@
+
+:root {
+    --acccol: #1098f7;
+    --lgcol: #343434;
+    --dgcol: #111;
+    --contspace: 60px;
+}
+
+html {
+    background-color: #171717;
+    color: white;
+    margin: 0em;
+    font-family: roboto, monospace;
+    scroll-behavior: smooth;
+}
+body {margin:0;}
+
+.main-content{
+/*    margin-left:var(--contspace);*/
+/*    padding:0.5em 3em;*/
+    width: 90%;
+    margin: auto;
+    margin-left: calc(5% + 30px);
+    min-height: 100vh;
+    margin-bottom: 6rem;
+}
+
+/*Menu nav*/
+.icon-bar {
+  width: var(--contspace); /* Set a specific width */
+  background-color: #343434; /* Dark-grey background */
+  height: 100%;
+  position: fixed;
+  top:0;
+}
+
+.icon-bar a {
+  display: block; /* Make the links appear below each other instead of side-by-side */
+  text-align: center; /* Center-align text */
+  padding: 10px; /* Add some padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: white; /* White text color */
+  font-size: 2em; /* Increased font-size */
+}
+
+.icon-bar a:hover {
+  background-color: var(--dgcol); /* Add a hover color */
+}
+
+.active {background-color: var(--acccol);}
+
+section 
+{margin:6em 0em;}
+
+.textbox{
+    padding:3em;
+    border-left: 0.2em solid var(--acccol);
+    background-color: #111;
+/*    margin-right:2em;*/
+}
+
+.title {
+    font-family: Verdana;
+    font-weight: bold;
+    margin:0em;
+/*    text-decoration: underline;*/
+/*    text-shadow: 0 0 1px var(--acccol), 0 0 2px var(--acccol),0 0 3px var(--acccol);*/
+/*
+    font-size: 3em;
+    color: #1098F7;
+    margin:0.5em 0em;
+*/
+}
+
+.title::before, .title::after{
+    content:'[';
+    color:white;
+    font-weight: bold;
+    text-shadow: 0 0 1px white, 0 0 2px white,0 0 4px white;
+}
+.title::after {content:']';}
+
+.faround {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    
+    font-size: 3em;
+    color: var(--acccol);
+    margin:1em 0em;
+    margin-right: 1em;
+    
+}
+
+.cont a {color: white;}
+
+section h1, h2, footer h1 {
+    font-family: verdana;
+    font-size: 1.8em;
+    margin-top: 0em;
+}
+h2 {font-size: 1.2em;}
+
+.pill-buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.pill-buttons a {
+    display: block;
+    padding: 0.25em 0.5em;
+    color: black;
+    background-color: var(--acccol);
+    border-radius: 0.15em;
+    margin-right:1em;
+    text-decoration: none;
+}
+
+div .proj{
+    margin: 1em;
+    padding: 2.5em;
+    border: 0.1em solid black;
+    border-top: 0.12em solid black;
+    max-width: 40%;
+    border-radius: 0.2em;
+    background-color: #111;
+}
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+}
+
+#anchor-proj h1{
+    margin-left: 1em;
+    font-size: 2em;
+}
+
+.proj h2 {
+    color: var(--acccol);
+    font-size: 1.8em;
+    margin-top: 0em;
+}
+
+summary {
+    background-color: var(--acccol);
+    color: black;
+    cursor:pointer;
+    padding: 0.2em 1em;
+    margin-top: 1em;
+}
+/*
+summary::before {
+    content: "+";
+    margin-right: 0.4em;
+    font-weight: bold;
+}
+*/
+
+details div {
+    padding: 0em 1em;
+    border: 0.1em solid var(--acccol);
+}
+
+.imagec {
+    width:70%;
+    margin:3em auto;
+    display: block;
+    border-radius: 0.05em;
+    padding: 1em;
+    outline: 0.3em solid black;
+    outline-offset: 0.5em;
+}
+
+/*
+.imageholder::before {
+    position: absolute;
+    top:0.5em;
+    left:0.5em;
+    border:0.2em solid var(--acccol);
+    z-index: -1;
+}
+*/
+
+/*footer*/
+footer {
+    margin-left: var(--contspace);
+    padding:2em;
+    display: flex;
+    background-color: var(--dgcol);
+    border-top: 0.1em solid black;
+    justify-content: space-between;
+    align-items: center;
+    height:6rem;
+}
+
+.contact a {
+    display: block;
+    text-decoration: none;
+    color: var(--acccol);
+    padding: 0 0.4em;
+    margin: 0.4em 0em;
+/*    border: 0.1em solid white;*/
+}
+.contact i {padding-right: 0.1em;}
+
+code {text-align: right;}
+code h2 {
+    color: var(--acccol);
+    margin-bottom: 0.2em;
+}
+
