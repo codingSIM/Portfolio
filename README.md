@@ -1,6 +1,6 @@
 # Portfolio
 Repository documenting the history of my developer portfolio website versions.
-All releases have tried to add something on top of previous releases discoveries in order to showcase my improvement and maintain a record of my website releases.
+All releases have tried to add something on top of previous discoveries in order to showcase my improvement and growth inbetween them.
 
 # Release 1
 Initial attempt at making a portfolio website.
