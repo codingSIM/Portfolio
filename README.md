@@ -1,6 +1,23 @@
 # Portfolio
 Repository documenting the history of my developer portfolio website versions.
-All releases have tried to add something on top of previous discoveries in order to showcase my improvement and growth inbetween them.
+All releases have tried to add something on top of previous releases in order to showcase improvement and growth.
+
+# Current Release 6
+
+# Release 6 (Current)
+--add image
+
+# Next plans
+---
+* Look into using more advanced selectors and variables within css
+* Learn more about animations
+* Learn more about combining images with text
+* Attempt having more than 1 accent colour? (Green/Orange?)
+* Website preview / logo?
+* Change look of projects section maybe?
+* Slide section for contact?
+
+======================Past Releases======================
 
 # Release 1
 Initial attempt at making a portfolio website.
@@ -73,12 +90,10 @@ Features:
 ## Version 1
 ![image](https://user-images.githubusercontent.com/57096435/154569761-fadf13f7-7d7e-4da1-a550-6386dc48898c.png)
 
-  
-  
 ## Version 2
 ![image](https://user-images.githubusercontent.com/57096435/154569808-24c69659-5658-410b-a731-96d39172a934.png)
 
-Overall in this release I was attempting to switch back to a darker theme whilst also simplifying the styling and applying my current knowledge.
+Overall in this release I was attempting to switch back to a darker theme whilst also simplifying the styling and applying current knowledge.
 
 Features:
 
@@ -92,19 +107,5 @@ Features:
 ---
 
 
-# Release 6 (Current)
-
-
-
-
-# Next plans
----
-* Look into using more advanced selectors and variables within css
-* Learn more about animations
-* Learn more about combining images with text
-* Attempt having more than 1 accent colour? (Green/Orange?)
-* Website preview / logo?
-* Change look of projects section maybe?
-* Slide section for contact?
 
 
