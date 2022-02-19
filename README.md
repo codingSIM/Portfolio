@@ -1,10 +1,8 @@
 # Portfolio
-Repository documenting the history of my developer portfolio website versions.
+Repository documenting the history of my portfolio website versions.
 All releases have tried to add something on top of previous releases in order to showcase improvement and growth.
 
-# Current Release 6
-
-# Release 6 (Current)
+## Current Release 6
 --add image
 
 # Next plans
@@ -17,9 +15,8 @@ All releases have tried to add something on top of previous releases in order to
 * Change look of projects section maybe?
 * Slide section for contact?
 
-======================Past Releases======================
-
-# Release 1
+# ___ Past Releases ___
+## Release 1
 Initial attempt at making a portfolio website.
 
 Features:
@@ -35,7 +32,7 @@ Features:
 ---
 
 
-# Release 2
+## Release 2
 More simplistic developer portfolio.
 
 Features:
@@ -53,7 +50,7 @@ Features:
 ---
 
 
-# Release 3
+## Release 3
 Simpler site, with more focus on content and projects page.
 
 Features:
@@ -71,7 +68,7 @@ Features:
 
 ---
 
-# Release 4
+## Release 4
 ![image](https://user-images.githubusercontent.com/57096435/154560707-5b46c3c5-1da2-4f56-b817-ee472695542f.png)
 
 More professional website, minimalistic.
@@ -86,11 +83,11 @@ Features:
 * Simpler list-styled projects page
 
 
-# Release 5
-## Version 1
+## Release 5
+### Version 1
 ![image](https://user-images.githubusercontent.com/57096435/154569761-fadf13f7-7d7e-4da1-a550-6386dc48898c.png)
 
-## Version 2
+### Version 2
 ![image](https://user-images.githubusercontent.com/57096435/154569808-24c69659-5658-410b-a731-96d39172a934.png)
 
 Overall in this release I was attempting to switch back to a darker theme whilst also simplifying the styling and applying current knowledge.
