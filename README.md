@@ -2,7 +2,7 @@
 Repository documenting the history of my portfolio website versions.
 All releases have tried to add something on top of previous releases in order to showcase improvement and growth.
 
-## Current Release 6
+## Current (Release 6)
 --add image
 
 # Next plans
