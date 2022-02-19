@@ -1,37 +1,46 @@
-
 :root {
     --acccol: #1098f7;
+    
+    /*Gray colours*/
     --lgcol: #343434;
+    --mgcol: #171717;
     --dgcol: #111;
+    
     --contspace: 60px;
+    --defm: 2em;
 }
 
 html {
-    background-color: #171717;
+    background-color: var(--mgcol);
     color: white;
     margin: 0em;
     font-family: roboto, monospace;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
-body {margin:0;}
+body {margin: 0;}
+section {margin: 6em 0em;}
+
+
 
 .main-content{
-/*    margin-left:var(--contspace);*/
-/*    padding:0.5em 3em;*/
-    width: 90%;
-    margin: auto;
-    margin-left: calc(5% + 30px);
-    min-height: 100vh;
+/*    width: calc(100% - var(--contspace));*/
+    margin: 1em var(--defm);
+    margin-left: calc(var(--contspace) + var(--defm));
+/*    Footer sits at bottom of page*/
     margin-bottom: 6rem;
+    min-height: 100vh;
 }
+
+
 
 /*Menu nav*/
 .icon-bar {
   width: var(--contspace); /* Set a specific width */
-  background-color: #343434; /* Dark-grey background */
+  background-color: var(--lgcol); /* Dark-grey background */
   height: 100%;
   position: fixed;
-  top:0;
+  top: 0;
 }
 
 .icon-bar a {
@@ -49,32 +58,24 @@ body {margin:0;}
 
 .active {background-color: var(--acccol);}
 
-section 
-{margin:6em 0em;}
 
-.textbox{
-    padding:3em;
-    border-left: 0.2em solid var(--acccol);
-    background-color: #111;
-/*    margin-right:2em;*/
-}
 
+
+/*TITLE CARD*/
 .title {
     font-family: Verdana;
     font-weight: bold;
-    margin:0em;
+    margin: 0em;
 /*    text-decoration: underline;*/
 /*    text-shadow: 0 0 1px var(--acccol), 0 0 2px var(--acccol),0 0 3px var(--acccol);*/
 /*
-    font-size: 3em;
     color: #1098F7;
-    margin:0.5em 0em;
 */
 }
 
 .title::before, .title::after{
-    content:'[';
-    color:white;
+    content: '[';
+    color: white;
     font-weight: bold;
     text-shadow: 0 0 1px white, 0 0 2px white,0 0 4px white;
 }
@@ -87,20 +88,51 @@ section
     
     font-size: 3em;
     color: var(--acccol);
-    margin:1em 0em;
-    margin-right: 1em;
-    
+    margin: 1em 0em;
 }
 
 .cont a {color: white;}
 
-section h1, h2, footer h1 {
+
+
+
+/*Headers*/
+section h1, h2, footer h1, #anchor-proj h1{
     font-family: verdana;
     font-size: 1.8em;
     margin-top: 0em;
 }
 h2 {font-size: 1.2em;}
 
+
+
+
+/*=========ABOUT=========*/
+.textbox{
+    padding: 3em;
+    border-left: 0.2em solid var(--acccol);
+    background-color: var(--dgcol);
+}
+
+summary {
+    background-color: var(--acccol);
+    color: black;
+    cursor: pointer;
+    padding: 0.2em 1em;
+    margin-top: 1em;
+}
+
+details div {
+    padding: 0em 1em;
+    border: 0.1em solid var(--acccol);
+}
+
+
+
+
+
+/*=========PROJECTS=========*/
+/*Buttons within projects*/
 .pill-buttons {
     display: flex;
     flex-direction: row;
@@ -112,29 +144,41 @@ h2 {font-size: 1.2em;}
     color: black;
     background-color: var(--acccol);
     border-radius: 0.15em;
-    margin-right:1em;
+    margin-right: 1em;
     text-decoration: none;
-}
-
-div .proj{
-    margin: 1em;
-    padding: 2.5em;
-    border: 0.1em solid black;
-    border-top: 0.12em solid black;
-    max-width: 40%;
-    border-radius: 0.2em;
-    background-color: #111;
 }
 
 .projects {
     display: flex;
     flex-direction: row;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
+/*    width: 100%;*/
+    justify-content: space-between;
+    flex-basis: 45%;
+    
+    
+/*  Problem with calc and row-gap 
+    1. percentage works for row-gap, but it's dependent on height of container
+    2. height of container doesn't have set size, so it's hard to add 20% to a 100% sized box / kind of impossible*/
+    
+/*    height: calc(100% + calc(100% - calc(40% * 2)));*/
+/*    height: calc(auto + 20%);*/
+/*    row-gap: calc( calc(100% - calc(40% * 2)) / 2 );*/
+/*    row-gap: 30%;*/
 }
 
-#anchor-proj h1{
-    margin-left: 1em;
-    font-size: 2em;
+.projects > div {
+/*    margin: 0;*/
+    margin-bottom: 5%;
+/*    margin: 1%;*/
+    padding: 2.5em;
+    border: 0.1em solid black;
+/*    border-top: 0.12em solid black;*/
+    flex-basis: 40%;
+    
+/*    min-width: 45%;*/
+    border-radius: 0.2em;
+    background-color: var(--dgcol);
 }
 
 .proj h2 {
@@ -143,26 +187,9 @@ div .proj{
     margin-top: 0em;
 }
 
-summary {
-    background-color: var(--acccol);
-    color: black;
-    cursor:pointer;
-    padding: 0.2em 1em;
-    margin-top: 1em;
-}
-/*
-summary::before {
-    content: "+";
-    margin-right: 0.4em;
-    font-weight: bold;
-}
-*/
 
-details div {
-    padding: 0em 1em;
-    border: 0.1em solid var(--acccol);
-}
 
+/*Image CSS*/
 .imagec {
     width:70%;
     margin:3em auto;
@@ -173,17 +200,8 @@ details div {
     outline-offset: 0.5em;
 }
 
-/*
-.imageholder::before {
-    position: absolute;
-    top:0.5em;
-    left:0.5em;
-    border:0.2em solid var(--acccol);
-    z-index: -1;
-}
-*/
 
-/*footer*/
+/*=============FOOTER(/contact)====================*/
 footer {
     margin-left: var(--contspace);
     padding:2em;
