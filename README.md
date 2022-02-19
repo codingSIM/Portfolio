@@ -7,6 +7,9 @@ All releases have tried to add something on top of previous releases in order to
 
 # Next plans
 ---
+* Utility classes (text-center, colours... etc)
+* Addition with media queries rather than simplification, min-width @media queries
+
 * Look into using more advanced selectors and variables within css
 * Learn more about animations
 * Learn more about combining images with text
