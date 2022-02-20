@@ -7,7 +7,8 @@
     --dgcol: #111;
     
     --contspace: 60px;
-    --defm: 2em;
+    --defm: 6em;
+    --pad: 2.5em;
 }
 
 html {
@@ -28,7 +29,7 @@ section {margin: 6em 0em;}
     margin: 1em var(--defm);
     margin-left: calc(var(--contspace) + var(--defm));
 /*    Footer sits at bottom of page*/
-    margin-bottom: 6rem;
+    margin-bottom: 6.5rem;
     min-height: 100vh;
 }
 
@@ -84,11 +85,12 @@ section {margin: 6em 0em;}
 .faround {
     display: flex;
     justify-content: space-between;
+    align-items: bottom;
     flex-direction: row;
     
-    font-size: 3em;
+    font-size: clamp(1em,1em + 4vw,5em);
     color: var(--acccol);
-    margin: 1em 0em;
+    margin: 0.5em 0em;
 }
 
 .cont a {color: white;}
@@ -109,7 +111,7 @@ h2 {font-size: 1.2em;}
 
 /*=========ABOUT=========*/
 .textbox{
-    padding: 3em;
+    padding: var(--pad);
     border-left: 0.2em solid var(--acccol);
     background-color: var(--dgcol);
 }
@@ -120,6 +122,7 @@ summary {
     cursor: pointer;
     padding: 0.2em 1em;
     margin-top: 1em;
+    font-weight: bold;
 }
 
 details div {
@@ -153,8 +156,10 @@ details div {
     flex-direction: row;
     flex-wrap: wrap;
 /*    width: 100%;*/
-    justify-content: space-between;
-    flex-basis: 45%;
+    justify-content: space-between; 
+    flex: 1 1 49%;
+/*    gap: 2%;*/
+/*    flex-basis: 45%;*/
     
     
 /*  Problem with calc and row-gap 
@@ -169,16 +174,22 @@ details div {
 
 .projects > div {
 /*    margin: 0;*/
-    margin-bottom: 5%;
+    margin-bottom: 1.4%;
 /*    margin: 1%;*/
-    padding: 2.5em;
+/*    padding: 2.5em; hmmm*/
     border: 0.1em solid black;
 /*    border-top: 0.12em solid black;*/
-    flex-basis: 40%;
+    flex-basis: 49%;
+
     
 /*    min-width: 45%;*/
     border-radius: 0.2em;
     background-color: var(--dgcol);
+}
+
+/*padding offsets flex calculations*/
+.projects > div > div {
+    padding: var(--pad);
 }
 
 .proj h2 {
@@ -191,26 +202,27 @@ details div {
 
 /*Image CSS*/
 .imagec {
-    width:70%;
+    width:80%;
     margin:3em auto;
     display: block;
     border-radius: 0.05em;
     padding: 1em;
-    outline: 0.3em solid black;
-    outline-offset: 0.5em;
+/*    outline: 0.3em solid black;*/
+/*    outline-offset: 0.5em;*/
 }
 
 
 /*=============FOOTER(/contact)====================*/
 footer {
     margin-left: var(--contspace);
-    padding:2em;
+/*    padding: var(--pad) calc(var(--pad) + var(--defm));*/
+    padding: var(--pad);
     display: flex;
     background-color: var(--dgcol);
     border-top: 0.1em solid black;
     justify-content: space-between;
     align-items: center;
-    height:6rem;
+    height:6.5rem;
 }
 
 .contact a {
@@ -221,6 +233,7 @@ footer {
     margin: 0.4em 0em;
 /*    border: 0.1em solid white;*/
 }
+
 .contact i {padding-right: 0.1em;}
 
 code {text-align: right;}
@@ -228,4 +241,63 @@ code h2 {
     color: var(--acccol);
     margin-bottom: 0.2em;
 }
+
+
+/*Utility classes*/
+.ms{
+    display: none;
+}
+
+
+/*To 444px*/
+/*===================MEDIA QUERIES=========================*/
+@media (max-width:85em) {
+    :root {
+        --defm: 2em;
+        --acccol: #07c934;
+    }
+}
+
+
+@media (max-width:55em) {
+    .projects {
+        display: block;
+    }
+    
+    :root {
+        --defm: 1em;
+        --contspace: 0px;
+        --acccol: #ffa617;
+        --pad: 1em;
+    }
+    
+    .icon-bar {display: none;}
+    section {margin: 2em 0em;}
+    
+    footer {
+        height: 8rem; 
+        padding-top: 1.5rem;
+    }
+    
+}
+
+
+@media (max-width:35em) {
+    .title::before, .title::after{
+    display: none;
+    }
+    
+    .contact h1 i {
+        display: none;
+    }
+    
+    .ms {display: inline-block; }
+    .ml {display: none;}
+    
+    footer h1 {font-size: 1.2em;}
+    code h2 {font-size: 1em;}
+    
+}
+
+
 
