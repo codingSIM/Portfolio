@@ -1,10 +1,14 @@
 :root {
-    --acccol: #1098f7;
+    
+/*blue    --acccol: #1098f7;*/
+/*green    --acccol: #07c934;*/
+    --acccol: hsl(37, 100%, 55%);
+    --accd: hsl(37,95%, 35%);
     
     /*Gray colours*/
-    --lgcol: #343434;
-    --mgcol: #171717;
-    --dgcol: #111;
+    --lgcol: hsl(0, 0%, 20%);
+    --mgcol: hsl(0, 0%, 9%);
+    --dgcol: hsl(0, 0%, 7%);
     
     --contspace: 60px;
     --defm: 6em;
@@ -33,6 +37,12 @@ section {margin: 6em 0em;}
     min-height: 100vh;
 }
 
+a { color: var(--acccol);
+    text-decoration: none;}
+a:hover { text-decoration: underline;}
+a:visited { color: var(--accd);}
+
+
 
 
 /*Menu nav*/
@@ -57,7 +67,8 @@ section {margin: 6em 0em;}
   background-color: var(--dgcol); /* Add a hover color */
 }
 
-.active {background-color: var(--acccol);}
+.active {background-color: var(--acccol);
+    pointer-events: none;}
 
 
 
@@ -72,6 +83,13 @@ section {margin: 6em 0em;}
 /*
     color: #1098F7;
 */
+    text-shadow: 0 1px 0 var(--accd), 0 2px 0 var(--accd),
+    0 3px 0 var(--accd), 0 4px 0 var(--accd),
+    0 5px 0 var(--accd), 0 6px 0 var(--accd),
+    0 7px 0 var(--accd), 0 8px 0 var(--accd);
+/*    0 9px 0 var(--accd), 0 10px 0 var(--accd),*/
+/*    0 11px 0 var(--accd), 0 12px 0 var(--accd),*/
+/*    0 20px 30px rgba(0, 0, 0, 0.5);*/
 }
 
 .title::before, .title::after{
@@ -85,7 +103,7 @@ section {margin: 6em 0em;}
 .faround {
     display: flex;
     justify-content: space-between;
-    align-items: bottom;
+    align-items: center;
     flex-direction: row;
     
     font-size: clamp(1em,1em + 4vw,5em);
@@ -130,6 +148,12 @@ details div {
     border: 0.1em solid var(--acccol);
 }
 
+.nopad {
+    padding-left:0em;
+}
+.fa-heart {
+    color: var(--acccol);
+}
 
 
 
@@ -182,7 +206,7 @@ details div {
     flex-basis: 49%;
 
     
-/*    min-width: 45%;*/
+/*    max-width: 49%;*/
     border-radius: 0.2em;
     background-color: var(--dgcol);
 }
@@ -200,13 +224,14 @@ details div {
 
 
 
+
 /*Image CSS*/
 .imagec {
-    width:80%;
-    margin:3em auto;
+    width:88%;
     display: block;
     border-radius: 0.05em;
-    padding: 1em;
+    margin: auto;
+/*    padding: 1em;*/
 /*    outline: 0.3em solid black;*/
 /*    outline-offset: 0.5em;*/
 }
@@ -244,9 +269,7 @@ code h2 {
 
 
 /*Utility classes*/
-.ms{
-    display: none;
-}
+.ms, .imageholder{display: none;}
 
 
 /*To 444px*/
@@ -254,8 +277,10 @@ code h2 {
 @media (max-width:85em) {
     :root {
         --defm: 2em;
-        --acccol: #07c934;
+/*        --acccol: #07c934;*/
     }
+    
+    .imageholder {display:block;}
 }
 
 
@@ -267,7 +292,7 @@ code h2 {
     :root {
         --defm: 1em;
         --contspace: 0px;
-        --acccol: #ffa617;
+/*        --acccol: #ffa617;*/
         --pad: 1em;
     }
     
@@ -279,6 +304,9 @@ code h2 {
         padding-top: 1.5rem;
     }
     
+    .imagec {
+        width: 100%;
+    }
 }
 
 
@@ -296,8 +324,4 @@ code h2 {
     
     footer h1 {font-size: 1.2em;}
     code h2 {font-size: 1em;}
-    
 }
-
-
-
