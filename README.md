@@ -28,23 +28,28 @@ Phone:
 ![image](https://user-images.githubusercontent.com/57096435/155398602-3695deff-ac76-4d08-9519-99a7b31b056a.png)
 
 
-# Next plans
----
-* Utility classes (text-center, colours... etc)
-* Addition with media queries rather than simplification, min-width @media queries
+> # Next plans
+>
+> ## Improve current version
+> * Website preview / logo?
+> * Slide section for contact?
+> * Add bg image?
+> * Animations?
+> ## General
+> * Utility classes (text-center, colours... etc)
+> * Addition with media queries rather than simplification, min-width @media queries
+>
+> ## Potential New Version
+> 1. Look into using more advanced selectors and variables within css
+> 1. Learn more about animations
+> 1. Learn more about combining images with text
+> 1. Attempt having more than 1 accent colour? (Green/Orange?)
+> 1. Change look of projects section maybe?
+> 1. Consider re-adding pop-ups? Or making a gallery section / add images for projects?
+>
 
-* Look into using more advanced selectors and variables within css
-* Learn more about animations
-* Learn more about combining images with text
-* Attempt having more than 1 accent colour? (Green/Orange?)
-* Website preview / logo?
-* Change look of projects section maybe?
-* Slide section for contact?
-* Add bg image?
 
-* Consider re-adding pop-ups? Or making a gallery section / add images for projects?
 
-_______________________________________________________________
 # ___ Past Releases ___
 ## Release 1
 Initial attempt at making a portfolio website.
